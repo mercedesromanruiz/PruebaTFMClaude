@@ -1,0 +1,1168 @@
+Plecs {
+  Name          "IM828 XCC"
+  Version       "5.0"
+  CircuitModel  "ContStateSpace"
+  StartTime     "0.0"
+  TimeSpan      "1.0"
+  Timeout       ""
+  Solver        "auto"
+  MaxStep       "1e-3"
+  InitStep      "-1"
+  FixedStep     "1e-3"
+  Refine        "1"
+  ZCStepSize    "1e-9"
+  RelTol        "1e-3"
+  AbsTol        "-1"
+  TurnOnThreshold "0"
+  NonIdealSwitchResistance "1"
+  SyncFixedStepTasks "2"
+  UseSingleCommonBaseRate "2"
+  LossVariableLimitExceededMsg "3"
+  NegativeSwitchLossMsg "3"
+  DivisionByZeroMsg "3"
+  DatatypeOverflowMsg "3"
+  DatatypeInheritanceConflictMsg "2"
+  ContSampleTimeConflictMsg "2"
+  StiffnessDetectionMsg "2"
+  MaxConsecutiveZCs "1000"
+  AlgebraicLoopWithStateMachineMsg "3"
+  AssertionAction "1"
+  FixedPointDatatypeOverride "1"
+  InitializationCommands ""
+  InitialState  "1"
+  SystemState   ""
+  JacobianComputation "2"
+  TaskingMode   "1"
+  TaskConfigurations ""
+  CodeGenParameterInlining "2"
+  CodeGenFloatingPointFormat "2"
+  CodeGenAbsTimeUsageMsg "3"
+  CodeGenBaseName ""
+  CodeGenOutputDir ""
+  CodeGenExtraOpts ""
+  CodeGenTarget "Generic"
+  CodeGenTargetSettings ""
+  ExtendedMatrixPrecision "1"
+  MatrixSignificanceCheck "2"
+  RemoveUnusedStateSpaceOutputs "2"
+  EnableStateSpaceSplitting "2"
+  DisplayStateSpaceSplitting "1"
+  DiscretizationMethod "2"
+  ExternalModeSettings ""
+  AlgebraicLoopMethod "1"
+  AlgebraicLoopTolerance "1e-6"
+  ScriptsDialogGeometry ""
+  ScriptsDialogSplitterPos "0"
+  MixedSignalSolverBypassOperatingPoint "1"
+  MixedSignalSolverInitialConditions "2"
+  MixedSignalSolverMaxNewtonIterations "25"
+  MixedSignalSolverNumThreads "-1"
+  OperatingPointMaxNewtonIterations "50"
+  OperatingPointRelativeNewtonTolerance "1e-3"
+  OperatingPointAbsoluteNewtonTolerance "1e-12"
+  OperatingPointNodalVoltageNewtonTolerance "1e-6"
+  SpiceTemperature "27"
+  NetlistParserDetails "2"
+  InvalidNetlistFunctionEvaluationMsg "1"
+  IncompatibleInitialConditionMsg "2"
+  Schematic {
+    Location      [362, 31; 1919, 988]
+    ZoomFactor    1.96257
+    SliderPosition [0, 854]
+    ShowBrowser   off
+    BrowserWidth  100
+    Component {
+      Type          Diode
+      Name          "D1"
+      Show          on
+      Position      [255, 170]
+      Direction     down
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:IM828-XCC_diode"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Np"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "SwitchModel"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "f_grid"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Igbt
+      Name          "IGBT1"
+      Show          on
+      Position      [200, 170]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:IM828-XCC_switch"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+      ComponentAssertion {
+        SignalName       "IGBT voltage"
+        TrSignalName     "IGBT voltage"
+        LowerLimit       "-inf"
+        UpperLimit       "inf"
+        IncludeLimits    off
+        Action           "2"
+      }
+    }
+    Component {
+      Type          Diode
+      Name          "D2"
+      Show          on
+      Position      [255, 350]
+      Direction     down
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:IM828-XCC_diode"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Np"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "SwitchModel"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "f_grid"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Igbt
+      Name          "IGBT2"
+      Show          on
+      Position      [200, 350]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:IM828-XCC_switch"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          Diode
+      Name          "D3"
+      Show          on
+      Position      [430, 170]
+      Direction     down
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:IM828-XCC_diode"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Np"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "SwitchModel"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "f_grid"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Igbt
+      Name          "IGBT3"
+      Show          on
+      Position      [375, 170]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:IM828-XCC_switch"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          Diode
+      Name          "D4"
+      Show          on
+      Position      [430, 350]
+      Direction     down
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:IM828-XCC_diode"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Np"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "SwitchModel"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "f_grid"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Igbt
+      Name          "IGBT4"
+      Show          on
+      Position      [375, 350]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:IM828-XCC_switch"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          Diode
+      Name          "D5"
+      Show          on
+      Position      [585, 170]
+      Direction     down
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:IM828-XCC_diode"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Np"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "SwitchModel"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "f_grid"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Igbt
+      Name          "IGBT5"
+      Show          on
+      Position      [530, 170]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:IM828-XCC_switch"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          Diode
+      Name          "D6"
+      Show          on
+      Position      [585, 350]
+      Direction     down
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:IM828-XCC_diode"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Np"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "SwitchModel"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "f_grid"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Igbt
+      Name          "IGBT6"
+      Show          on
+      Position      [530, 350]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:IM828-XCC_switch"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          Diode
+      Name          "D7"
+      Show          on
+      Position      [620, 775]
+      Direction     down
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:IM828-XCC_diode"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Np"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "SwitchModel"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "f_grid"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Igbt
+      Name          "IGBT7"
+      Show          on
+      Position      [565, 775]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:IM828-XCC_switch"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          PulseGenerator
+      Name          "Pulse\nGenerator"
+      Show          on
+      Position      [470, 775]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Hi"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Lo"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "f"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "DutyCycle"
+        Value         "0.5"
+        Show          off
+      }
+      Parameter {
+        Variable      "Delay"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope"
+      Show          on
+      Position      [725, 905]
+      Direction     right
+      Flipped       off
+      LabelPosition west
+      Frame         [-15, -15; 15, 15]
+      Location      [640, 276; 1344, 601]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAAsAAAAEmAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":184,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "2"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux"
+      Show          off
+      Position      [725, 855]
+      Direction     down
+      Flipped       off
+      LabelPosition west
+      Frame         [-10, -2; 10, 7]
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Voltmeter
+      Name          "Vm1"
+      Show          on
+      Position      [675, 745]
+      Direction     up
+      Flipped       off
+      LabelPosition west
+    }
+    Component {
+      Type          Ammeter
+      Name          "Am1"
+      Show          on
+      Position      [565, 880]
+      Direction     up
+      Flipped       off
+      LabelPosition west
+    }
+    Component {
+      Type          DCVoltageSource
+      Name          "V_dc"
+      Show          on
+      Position      [285, 790]
+      Direction     down
+      Flipped       on
+      LabelPosition east
+      Parameter {
+        Variable      "V"
+        Value         "5"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R1"
+      Show          on
+      Position      [565, 645]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "R"
+        Value         "100"
+        Show          off
+      }
+    }
+    Component {
+      Type          IgbtWithDiode
+      Name          "IGBTD"
+      Show          on
+      Position      [40, 595]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "IGBT1"
+      SrcTerminal   1
+      Points        [200, 130]
+      Branch {
+        Points        [255, 130]
+        DstComponent  "D1"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [200, 90]
+        Branch {
+          Points        [375, 90]
+          Branch {
+            Points        [375, 130]
+            Branch {
+              DstComponent  "IGBT3"
+              DstTerminal   1
+            }
+            Branch {
+              Points        [430, 130]
+              DstComponent  "D3"
+              DstTerminal   2
+            }
+          }
+          Branch {
+            Points        [530, 90; 530, 130]
+            Branch {
+              DstComponent  "IGBT5"
+              DstTerminal   1
+            }
+            Branch {
+              Points        [585, 130]
+              DstComponent  "D5"
+              DstTerminal   2
+            }
+          }
+        }
+        Branch {
+          Points        [125, 90]
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "IGBT2"
+      SrcTerminal   1
+      Points        [200, 310]
+      Branch {
+        Points        [255, 310]
+        DstComponent  "D2"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [200, 230]
+        Branch {
+          Points        [200, 215]
+          Branch {
+            DstComponent  "IGBT1"
+            DstTerminal   2
+          }
+          Branch {
+            Points        [255, 215]
+            DstComponent  "D1"
+            DstTerminal   1
+          }
+        }
+        Branch {
+          Points        [650, 230]
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "IGBT4"
+      SrcTerminal   1
+      Points        [375, 310]
+      Branch {
+        Points        [430, 310]
+        DstComponent  "D4"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [375, 245]
+        Branch {
+          Points        [375, 215]
+          Branch {
+            DstComponent  "IGBT3"
+            DstTerminal   2
+          }
+          Branch {
+            Points        [430, 215]
+            DstComponent  "D3"
+            DstTerminal   1
+          }
+        }
+        Branch {
+          Points        [650, 245]
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "IGBT6"
+      SrcTerminal   1
+      Points        [530, 310]
+      Branch {
+        Points        [585, 310]
+        DstComponent  "D6"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [530, 260]
+        Branch {
+          Points        [530, 215]
+          Branch {
+            DstComponent  "IGBT5"
+            DstTerminal   2
+          }
+          Branch {
+            Points        [585, 215]
+            DstComponent  "D5"
+            DstTerminal   1
+          }
+        }
+        Branch {
+          Points        [650, 260]
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "IGBT6"
+      SrcTerminal   2
+      Points        [530, 395]
+      Branch {
+        Points        [585, 395]
+        DstComponent  "D6"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [530, 440; 375, 440]
+        Branch {
+          Points        [375, 395]
+          Branch {
+            DstComponent  "IGBT4"
+            DstTerminal   2
+          }
+          Branch {
+            Points        [430, 395]
+            DstComponent  "D4"
+            DstTerminal   1
+          }
+        }
+        Branch {
+          Points        [200, 440]
+          Branch {
+            Points        [200, 395]
+            Branch {
+              DstComponent  "IGBT2"
+              DstTerminal   2
+            }
+            Branch {
+              Points        [255, 395]
+              DstComponent  "D2"
+              DstTerminal   1
+            }
+          }
+          Branch {
+            Points        [125, 440]
+          }
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "IGBT7"
+      SrcTerminal   1
+      Points        [565, 735]
+      Branch {
+        Points        [620, 735]
+        DstComponent  "D7"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [565, 695]
+        Branch {
+          Points        [675, 695]
+          DstComponent  "Vm1"
+          DstTerminal   1
+        }
+        Branch {
+          DstComponent  "R1"
+          DstTerminal   2
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "IGBT7"
+      SrcTerminal   2
+      Points        [565, 810]
+      Branch {
+        Points        [620, 810]
+        DstComponent  "D7"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [565, 835]
+        Branch {
+          Points        [675, 835]
+          DstComponent  "Vm1"
+          DstTerminal   2
+        }
+        Branch {
+          DstComponent  "Am1"
+          DstTerminal   1
+        }
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Pulse\nGenerator"
+      SrcTerminal   1
+      DstComponent  "IGBT7"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Mux"
+      SrcTerminal   1
+      DstComponent  "Scope"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Vm1"
+      SrcTerminal   3
+      Points        [730, 745]
+      DstComponent  "Mux"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Am1"
+      SrcTerminal   3
+      Points        [650, 880; 650, 840]
+      DstComponent  "Mux"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc"
+      SrcTerminal   2
+      Points        [285, 920; 565, 920]
+      DstComponent  "Am1"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R1"
+      SrcTerminal   1
+      Points        [565, 590; 285, 590]
+      DstComponent  "V_dc"
+      DstTerminal   1
+    }
+    Annotation {
+      Name          "<html><body>\n<p><span style=\" font-size:12px;\">I</span"
+"><span style=\" font-size:6px;\">out</span></p></body></html>"
+      Position      [605, 220]
+    } 
+    Annotation {
+      Name          "<html><body>\n<p><span style=\" font-size:12px;\">V</span"
+"><span style=\" font-size:6px;\">out</span></p></body></html>"
+      Position      [675, 240]
+    } 
+    Annotation {
+      Name          "<html><body>\n<p><span style=\" font-size:12px;\">V</span"
+"><span style=\" font-size:6px;\">DC</span></p></body></html>"
+      Position      [95, 260]
+    } 
+  }
+}

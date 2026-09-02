@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SemiconductorLibrary xmlns="http://www.plexim.com/xml/semiconductors/" version="1.2">
+    <Package class="IGBT" vendor="Infineon" partnumber="IM828-XCC">
+        <Variables/>
+        <CustomTables>
+            <Table2D>
+                <Name>MZTHQ2D</Name>
+                <XAxis> 0 1 2 3</XAxis>
+                <YAxis> 0 1</YAxis>
+                <FunctionValues scale="1">
+                    <YDimension> 0.2241 0.482 1.4434 0.2319</YDimension>
+                    <YDimension> 0.0012 0.0535 0.6907 16.34</YDimension>
+                </FunctionValues>
+            </Table2D>
+        </CustomTables>
+        <SemiconductorData type="IGBT">
+            <TurnOnLoss>
+                <ComputationMethod>Table only</ComputationMethod>
+                <CurrentAxis> -0.5 0 0.001 0.5 1 2 5 10 13 15 18 20 40 50</CurrentAxis>
+                <VoltageAxis> 0 600</VoltageAxis>
+                <TemperatureAxis> 25 150</TemperatureAxis>
+                <Energy scale="1e-06">
+                    <Temperature>
+                        <Voltage> 0 0 0 0 0 0 0 0 0 0 0 0 0 0</Voltage>
+                        <Voltage> 0 0 1 97.1 123.2 185.7 366.4 697.4 928.1 1082 1375 1570 3684 5089</Voltage>
+                    </Temperature>
+                    <Temperature>
+                        <Voltage> 0 0 0 0 0 0 0 0 0 0 0 0 0 0</Voltage>
+                        <Voltage> 0 0 1.2 95.7 127.1 181 382 737.5 959.2 1107 1387 1574 3847 5488</Voltage>
+                    </Temperature>
+                </Energy>
+            </TurnOnLoss>
+            <TurnOffLoss>
+                <ComputationMethod>Table only</ComputationMethod>
+                <CurrentAxis> 0 0.001 0.5 1 2 5 10 13 15 18 20 40 50</CurrentAxis>
+                <VoltageAxis> 0 600</VoltageAxis>
+                <TemperatureAxis> 25 150</TemperatureAxis>
+                <Energy scale="1e-06">
+                    <Temperature>
+                        <Voltage> 0 0 0 0 0 0 0 0 0 0 0 0 0</Voltage>
+                        <Voltage> 0 4 43.16 43.43 40.26 38.18 61.82 90.88 110.3 148.1 173.4 584 890.1</Voltage>
+                    </Temperature>
+                    <Temperature>
+                        <Voltage> 0 0 0 0 0 0 0 0 0 0 0 0 0</Voltage>
+                        <Voltage> 0 2 43.8 41.2 38.86 39.88 78.4 111.2 133 174.5 202.2 652.8 1005</Voltage>
+                    </Temperature>
+                </Energy>
+            </TurnOffLoss>
+            <ConductionLoss>
+                <ComputationMethod>Table only</ComputationMethod>
+                <CurrentAxis> 0 0.001 0.05 0.1 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 5.5 6 6.5 7 7.5 8 8.5 9 9.5 10 10.5 11 11.5 12 12.5 13 13.5 14 14.5 15 15.5 16 16.5 17 17.5 18 18.5 19 19.5 20 22 24 26 28 30</CurrentAxis>
+                <TemperatureAxis> 25 150</TemperatureAxis>
+                <VoltageDrop scale="1">
+                    <Temperature> 0 0.001 0.005 0.01 0.02 0.04 0.05 0.07 0.1 0.12 0.15 0.16 0.19 0.22 0.23 0.27 0.29 0.32 0.34 0.35 0.38 0.42 0.43 0.46 0.49 0.52 0.54 0.57 0.59 0.62 0.64 0.66 0.7 0.72 0.74 0.78 0.8 0.82 0.85 0.89 0.92 0.93 0.97 0.99 1.11 1.23 1.34 1.46 1.58</Temperature>
+                    <Temperature> 0 0.001 0.005 0.01 0.03 0.06 0.085 0.12 0.15 0.18 0.215 0.24 0.27 0.295 0.335 0.36 0.395 0.42 0.455 0.485 0.52 0.55 0.58 0.62 0.65 0.685 0.72 0.75 0.78 0.81 0.855 0.885 0.91 0.95 0.98 1.01 1.05 1.08 1.115 1.15 1.185 1.215 1.255 1.28 1.435 1.57 1.715 1.87 2.025</Temperature>
+                </VoltageDrop>
+            </ConductionLoss>
+        </SemiconductorData>
+        <ThermalModel>
+            <Branch type="Foster" convertToCauer="false">
+                <RTauElement R="0.2241" Tau="0.0012"/>
+                <RTauElement R="0.482" Tau="0.0535"/>
+                <RTauElement R="1.4434" Tau="0.6907"/>
+                <RTauElement R="0.2319" Tau="16.344"/>
+            </Branch>
+        </ThermalModel>
+        <Comment>
+            <Line></Line>
+        </Comment>
+    </Package>
+</SemiconductorLibrary>
